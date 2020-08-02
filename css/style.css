@@ -1,0 +1,59 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, blue, green);
+}
+
+.ogla-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100%;
+  padding-top: 45px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.ogla-grid > button {
+  cursor: pointer;
+  font-size: 32px;
+  border: 1px solid white;
+  outline: none;
+  background-color: khaki;
+}
+
+.ogla-grid > button:hover {
+  background-color: pink;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: cyan;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: indigo;
+  font-size: 24px;
+}
+
+.output .current-operand {
+  color: purple;
+  font-size: 40px;
+}
